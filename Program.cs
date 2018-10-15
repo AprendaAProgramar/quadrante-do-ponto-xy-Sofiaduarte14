@@ -10,8 +10,23 @@ namespace ConsoleApp1
     {
         static void Main(string[] args)
         {
-            //Coloque aqui o seu codigo
-        
+            int x, y;
+            Console.WriteLine("Introduza o valor da abscissa:");
+            x = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Introduza o valor da ordenada:");
+            y = Convert.ToInt32(Console.ReadLine());
+            if (x > 0)
+            {
+                if (y > 0)
+                    Console.WriteLine ("O ponto ({0},{1}) está no primeiro quadrante", x, y);
+                else
+                    Console.WriteLine ("O ponto ({0},{1}) está no quarto quadrante", x, y);
+            }
+            else
+                if (y > 0)
+                    Console.WriteLine ("O ponto ({0},{1}) está no segundo quadrante", x, y);
+                else
+                    Console.WriteLine ("O ponto ({0},{1}) está no terceiro quadrante", x, y);
         }
     }
 }
